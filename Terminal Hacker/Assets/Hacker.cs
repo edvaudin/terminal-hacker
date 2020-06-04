@@ -5,7 +5,7 @@ public class Hacker : MonoBehaviour
     string[] level1Passwords = { "books", "shelf", "aisle", "local", "stamp" };
     string[] level2Passwords = { "arrest", "police", "taser", "prisoner", "holster" };
     string[] level3Passwords = { "nitrogen", "oxygen", "helium", "mercury", "carbon" };
-    const string menuHint = "You may type menu at any time";
+    const string menuHint = "If you want to go back, type menu";
     int level;
     string password;
     enum Screen { MainMenu, Password, Win };
@@ -21,12 +21,12 @@ public class Hacker : MonoBehaviour
     {
         currentScreen = Screen.MainMenu;
         Terminal.ClearScreen();
-        Terminal.WriteLine("Hello " + name);
-        Terminal.WriteLine("Select target:");
+        Terminal.WriteLine("Welcome to the terminal.");
         Terminal.WriteLine("");
-        Terminal.WriteLine("Press 1 for Stanton Library");
-        Terminal.WriteLine("Press 2 for Stanton Prison");
-        Terminal.WriteLine("Press 3 for NASA");
+        Terminal.WriteLine("Select a level:");
+        Terminal.WriteLine("Type 1 for Stanton Library.");
+        Terminal.WriteLine("Type 2 for Stanton Prison.");
+        Terminal.WriteLine("Type 3 for NASA.");
     }
     void OnUserInput(string input)
     {
