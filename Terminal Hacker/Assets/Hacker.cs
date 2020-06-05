@@ -63,8 +63,11 @@ public class Hacker : MonoBehaviour
         currentScreen = Screen.Password;
         Terminal.ClearScreen();
         SetRandomPassword();
-        Terminal.WriteLine("Enter password (hint: " + password.Anagram() + "): ");
-        Terminal.WriteLine(menuHint); 
+        Terminal.WriteLine(menuHint);
+        Terminal.WriteLine("");
+        Terminal.WriteLine("Hint: " + password.Anagram());
+        Terminal.WriteLine("Enter password: ");
+        
     }
     
     void SetRandomPassword()
